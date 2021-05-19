@@ -1,2 +1,3 @@
 <?php
-echo var_dump($_POST);
+
+echo $_SERVER['REMOTE_ADDR'];
