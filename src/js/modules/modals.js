@@ -1,4 +1,5 @@
 const modals = () => {
+
   function bindModal(triggerSelector, modalSelector, closeSelector, closeClickOverlay = true) {
     const trigger = document.querySelectorAll(triggerSelector),
       modal = document.querySelector(modalSelector),
@@ -20,10 +21,12 @@ const modals = () => {
         modal.style.display = 'block';
         document.body.style.overflow = 'hidden';
         document.body.style.marginRight = `${scroll}px`;
+        document.body.classList.add('mpdal-open');
       });
     });
 
     // закрыли МО
+
     close.addEventListener('click', () => {
       windows.forEach((item) => {
         item.style.display = 'none';
@@ -32,6 +35,7 @@ const modals = () => {
       modal.style.display = 'none';
       document.body.style.overflow = '';
       document.body.style.marginRight = `0px`;
+      document.body.classList.remove('mpdal-open');
     });
 
     // закрываем по клику на подложку
@@ -44,17 +48,19 @@ const modals = () => {
         modal.style.display = 'none';
         document.body.style.overflow = '';
         document.body.style.marginRight = `0px`;
+        document.body.classList.remove('mpdal-open');
       }
     });
   }
 
   // открытие МО через 3 секунды
-  // function showModalByTime(selector, time) {
-  //   setTimeout(() => {
-  //     document.querySelector(selector).style.display = 'block';
-  //     document.body.style.overflow = 'hidden';
-  //   }, time);
-  // }
+
+  function showModalByTime(selector, time) {
+    setTimeout(function () {
+      document.querySelector(selector).style.display = 'block';
+      document.body.style.overflow = 'hidden';
+    }, time);
+  }
 
   function calcScroll() {
     let div = document.createElement('div');

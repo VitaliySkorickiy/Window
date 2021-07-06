@@ -47,12 +47,18 @@ a:focus, button:focus, input:focus, textarea:focus {
   padding: 0 !important;
 }
 
+p {
+  margin: 0;
+}
+
 .form {
   /*margin-top: 2rem;*/
-  padding: 2rem 5rem;
+  padding: 2rem 5rem 1rem;
   text-align: center;
   border-radius: 1rem;
   background-color: #ffffff;
+  box-sizing: border-box;
+  height: 415px;
 }
 
 .form h2 {
@@ -121,7 +127,7 @@ a:focus, button:focus, input:focus, textarea:focus {
 
 .form_notice {
   margin-top: 1rem;
-  margin-bottom: 2rem;
+  /* margin-bottom: 2rem; */
   font-size: 1.1rem;
   color: #666;
 }
@@ -129,7 +135,7 @@ a:focus, button:focus, input:focus, textarea:focus {
 .button {
   padding: 2.5rem 0rem;
   font-size: 1.7rem;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Oen Sans', sans-serif;
   font-weight: 700;
   font-style: normal;
   border: 1px solid #ffc600;
@@ -937,6 +943,7 @@ a:focus, button:focus, input:focus, textarea:focus {
   display: none;
   margin-bottom: 3rem;
   width: 30rem;
+  height: 175px;
 }
 
 .popup_calc_content #type1 {
